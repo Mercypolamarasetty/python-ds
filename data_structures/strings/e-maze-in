@@ -1,0 +1,25 @@
+""" Mercy is in maze. The command center sent her a string which decodes to come out from the maze. She is initially at (0, 0). 
+String contains L, R, U, D denoting left, right, up and down. 
+In each command she will traverse 1 unit distance in the respective direction.
+
+For example if she is at (2, 0) and the command is L she will go to (1, 0).
+
+Input:
+Input contains a single string.
+Output:
+Print the final point where he came out."""
+
+x=0                          # initiliaze x to zero
+y=0                          # initialize y to zero
+direction=input()            # take string from the user
+for i in direction:          # extract one by one char from given string 
+    if i=='L':               # compare the char with "L"
+        x=x-1                # decrement x by 1
+    elif i=='R':             # compare the char with "R"
+        x=x+1                # increment x by 1
+    elif i=='U':             # compare char with "U"
+        y=y+1                # increment by 1
+    elif i=='D':             # campare char with "D"
+        y=y-1                # decrement by 1
+
+print(x,y)                   # finally print out the point 
